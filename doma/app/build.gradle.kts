@@ -16,7 +16,6 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
-
     }
 
     buildTypes {
@@ -49,7 +48,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.play.services.wearable)
     implementation(platform(libs.compose.bom))
     implementation(libs.ui)
@@ -62,9 +60,21 @@ dependencies {
     implementation(libs.wear)
     implementation(libs.wear.v120)
     implementation(libs.play.services.wearable.v1700)
+    implementation(libs.kotlin.stdlib)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.appcompat.v131)
+    implementation(libs.material)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.lifecycle.runtime.ktx)
+    implementation(libs.activity.ktx)
+
+    // Dependências para reconhecimento de voz e Text-to-Speech
+    implementation(libs.play.services.speech)
+
     testImplementation(libs.junit)
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.espresso.core)
+
     androidTestImplementation(platform(libs.compose.bom))
     androidTestImplementation(libs.ui.test.junit4)
     debugImplementation(libs.ui.tooling)
